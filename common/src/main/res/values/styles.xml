@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CarAppTheme">
+        <item name="carColorPrimary">#7827a3</item>
+        <item name="carColorPrimaryDark">#380d4f</item>
+        <item name="carColorSecondary">#8a1959</item>
+        <item name="carColorSecondaryDark">#540a34</item>
+    </style>
+</resources>
