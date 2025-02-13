@@ -1,11 +1,7 @@
 package com.example.common.screen;
 
-import android.util.Log;
-
 import androidx.car.app.CarContext;
 import androidx.car.app.Screen;
-import androidx.car.app.hardware.CarHardwareManager;
-import androidx.car.app.hardware.info.CarInfo;
 import androidx.car.app.model.Action;
 import androidx.car.app.model.Header;
 import androidx.car.app.model.MessageTemplate;
@@ -39,13 +35,13 @@ public class MyLibraryTestScreen extends Screen {
 
         lifecycle.addObserver(new DefaultLifecycleObserver()  {
             @Override
-            public void onCreate(@androidx.annotation.NonNull LifecycleOwner owner){
+            public void onCreate(@NonNull LifecycleOwner owner){
                 speechRecognitionHandler = new SpeechRecognitionHandler(getCarContext());
                 speechRecognitionHandler.setCommandHandler(command -> handleCommand(command));
             }
 
             @Override
-            public void onDestroy(@androidx.annotation.NonNull LifecycleOwner owner){
+            public void onDestroy(@NonNull LifecycleOwner owner){
                 speechRecognitionHandler.clear();
             }
         });

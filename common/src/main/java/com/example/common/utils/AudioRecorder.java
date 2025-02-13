@@ -79,7 +79,8 @@ public class AudioRecorder {
                         })
                         .build();
 
-        if (carContext.getSystemService(AudioManager.class).requestAudioFocus(audioFocusRequest)
+        AudioManager audioManager = carContext.getSystemService(AudioManager.class);
+        if (audioManager.requestAudioFocus(audioFocusRequest)
                 != AUDIOFOCUS_REQUEST_GRANTED) {
             return;
         }

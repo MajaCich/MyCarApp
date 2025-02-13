@@ -53,11 +53,10 @@ public class CarSpanScreen extends Screen {
         pane.addRow(clickableSpanRow.build());
          */
 
+        CarIcon carIcon = new CarIcon.Builder(IconCompat.createWithResource(getCarContext(), R.drawable.android)).setTint(CarColor.BLUE).build();
         SpannableString string = new SpannableString(getCarContext().getString(R.string.car_icon_span_text));
         string.setSpan(
-                CarIconSpan.create(new CarIcon.Builder(
-                        IconCompat.createWithResource(getCarContext(), R.drawable.android)).setTint(CarColor.BLUE).build(),
-                        CarIconSpan.ALIGN_CENTER),
+                CarIconSpan.create(carIcon, CarIconSpan.ALIGN_CENTER),
                 14, 15, SPAN_INCLUSIVE_EXCLUSIVE);
 
         Row.Builder carIconSpanRow = new Row.Builder()

@@ -9,16 +9,13 @@ import androidx.car.app.model.ItemList;
 import androidx.car.app.model.ListTemplate;
 import androidx.car.app.model.Row;
 import androidx.car.app.model.Template;
-import com.example.common.MyCarAppSession;
 import com.example.common.R;
 
 public class MainScreen extends Screen {
 
-   MyCarAppSession session;
 
-    public MainScreen(@NonNull CarContext carContext, MyCarAppSession session) {
+    public MainScreen(@NonNull CarContext carContext) {
         super(carContext);
-        this.session=session;
     }
 
     @NonNull

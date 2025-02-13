@@ -7,24 +7,17 @@ import android.media.AudioAttributes;
 import android.media.AudioFocusRequest;
 import android.media.AudioFormat;
 import android.media.AudioManager;
-import android.os.Build;
-import android.os.Bundle;
 import android.os.ParcelFileDescriptor;
-import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.util.Log;
-
 import androidx.car.app.CarAppPermission;
 import androidx.car.app.CarContext;
 import androidx.car.app.media.CarAudioRecord;
 import androidx.car.app.model.Action;
-import androidx.car.app.model.CarColor;
 import androidx.car.app.model.CarIcon;
 import androidx.core.graphics.drawable.IconCompat;
-
 import java.io.IOException;
-import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Consumer;
 
@@ -206,7 +199,7 @@ public class SpeechRecognitionHandler {
         }
     }
     
-    public void startVoiceCommands() {
+    public void startVoiceControl() {
         handleSpeechBegin();
     }
 
